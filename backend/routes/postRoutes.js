@@ -1,6 +1,6 @@
 import express from "express";
 import { upload } from "../config/cloudinary.js"; 
-import Post from "../models/Post.js";
+import post from "../models/post.js";
 import Comment from "../models/Comment.js";
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
