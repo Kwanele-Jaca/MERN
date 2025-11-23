@@ -174,13 +174,13 @@ app.use("/projects",projectRoutes);
 
 //import express from "express";
 
-app.use(express.static(path.join(__dirname, "../frontend/dist")));
+/*app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
 
 
 app.get(['/', '/login', '/register', '/dashboard', '/userdashboard'], (req, res) => {
   res.sendFile(path.join(__dirname, "../frontend/dist/index.html"));
-});
+});*/
 
 app.listen(5000, () => {
   connectDB();
