@@ -30,8 +30,12 @@ if (!JWT_SECRET) {
   process.exit(1);
 }
 
+
 app.use(cors({
-  origin: "*",
+  origin: [
+    "https://<your-frontend-name>.onrender.com", // frontend domain
+    "http://localhost:5173" // local dev
+  ],
   credentials: true,
 }));
 

@@ -40,7 +40,7 @@ const handleProfilePicUpload = async (e) => {
 
   const token = localStorage.getItem("token");
 
-  const res = await fetch("/api/user/uploadProfilePic", {
+  const res = await fetch("https://mern-7-2gn5.onrender.com/api/user/uploadProfilePic", {
     method: "POST",
     headers: {
       Authorization: `Bearer ${token}`,
