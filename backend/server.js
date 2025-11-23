@@ -31,10 +31,10 @@ if (!JWT_SECRET) {
 }
 
 app.use(cors({
-  origin: "http://localhost:5173", 
-  methods: ["GET", "POST"],
+  origin: "*",
   credentials: true,
 }));
+
 
 
 app.use(express.json());
