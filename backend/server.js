@@ -186,6 +186,11 @@ app.get(['/', '/login', '/register', '/dashboard', '/userdashboard'], (req, res)
   res.sendFile(path.join(__dirname, "../frontend/dist/index.html"));
 });*/
 
+
+app.get("/api/test", (req, res) => {
+  res.json({ message: "Backend is working!" });
+});
+
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {

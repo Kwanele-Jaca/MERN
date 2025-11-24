@@ -112,7 +112,7 @@ const handleAddProject = async () => {
 
   
 
-    const res = await fetch("/projects/upload", {
+    const res = await fetch("https://mern-7-2gn5.onrender.com/projects/upload", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${token}`,

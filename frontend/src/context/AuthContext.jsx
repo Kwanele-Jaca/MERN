@@ -30,7 +30,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (email, password) => {
     try {
-      const response = await axios.post('/login', {
+      const response = await axios.post('https://mern-7-2gn5.onrender.com/login', {
         email,
         password
       });

@@ -42,7 +42,7 @@ export default function CommunityFeed() {
 
   const fetchPosts = async () => {
     try {
-      const res = await fetch("/api/posts", {
+      const res = await fetch("https://mern-7-2gn5.onrender.com/api/posts", {
         headers: { Authorization: `Bearer ${token}` },
       });
       const postsData = await res.json();
@@ -61,7 +61,7 @@ export default function CommunityFeed() {
       formData.append("text", newPostText);
       if (newPostImage) formData.append("image", newPostImage);
 
-      const res = await fetch("/api/posts/create", {
+      const res = await fetch("https://mern-7-2gn5.onrender.com/api/posts/create", {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
         body: formData,
@@ -82,7 +82,7 @@ export default function CommunityFeed() {
   // LIKE/UNLIKE POST
   const handleLike = async (postId) => {
     try {
-      const res = await fetch(`/api/posts/${postId}/like`, {
+      const res = await fetch(`https://mern-7-2gn5.onrender.com/api/posts/${postId}/like`, {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -129,7 +129,7 @@ export default function CommunityFeed() {
     if (!text.trim()) return;
 
     try {
-      const res = await fetch(`/api/posts/${postId}/comment`, {
+      const res = await fetch(`https://mern-7-2gn5.onrender.com/api/posts/${postId}/comment`, {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -141,7 +141,7 @@ export default function CommunityFeed() {
       const newComment = await res.json();
       
       // Fetch updated comments for this post
-      const commentsRes = await fetch(`/api/posts/${postId}/comments`, {
+      const commentsRes = await fetch(`https://mern-7-2gn5.onrender.com/api/posts/${postId}/comments`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       const updatedComments = await commentsRes.json();
@@ -171,7 +171,7 @@ export default function CommunityFeed() {
   // FETCH COMMENTS FOR A POST
   const fetchComments = async (postId, index) => {
     try {
-      const res = await fetch(`/api/posts/${postId}/comments`, {
+      const res = await fetch(`https://mern-7-2gn5.onrender.com/api/posts/${postId}/comments`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       const comments = await res.json();

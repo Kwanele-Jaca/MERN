@@ -20,7 +20,7 @@ export default function ProjectCards({ onOpenProject }) {
     try {
       const token = localStorage.getItem("token");
 
-      const res = await fetch("/projects/myProjects", {
+      const res = await fetch("https://mern-7-2gn5.onrender.com/projects/myProjects", {
         headers: {
           Authorization: `Bearer ${token}`,   // FIXED
         },

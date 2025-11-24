@@ -23,7 +23,7 @@ function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("/api/register", form);
+      await axios.post("https://mern-7-2gn5.onrender.com/api/register", form);
       alert("User registered successfully!");
       setForm({ username: "", email: "", password: "", role: "" });
     } catch (err) {
