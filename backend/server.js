@@ -33,7 +33,7 @@ if (!JWT_SECRET) {
 
 app.use(cors({
   origin: [
-    "https://mern-9-r30j.onrender.com", // frontend domain
+    "https://mern-1-dq4a.onrender.com", // frontend domain
     "http://localhost:5173" // local dev
   ],
   credentials: true,
