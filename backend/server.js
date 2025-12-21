@@ -76,7 +76,7 @@ const requireRole = (role) => {
   };
 };
 
-app.post("/register", async (req, res) => {
+app.post("/api/register", async (req, res) => {
   try {
     console.log("Incoming body:", req.body); // debug log
 
